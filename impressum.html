@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="robots" content="noindex" />
+    <title>Impressum · Luftinstrumente</title>
+    <link rel="stylesheet" href="legal.css" />
+    <script>
+      // In der App (?app): dunkle Darstellung, Verweise auf die anderen Rechtstexte bleiben in der App.
+      if (new URLSearchParams(location.search).has('app')) {
+        document.documentElement.classList.add('in-app');
+        addEventListener('DOMContentLoaded', () => {
+          for (const a of document.querySelectorAll('a[href$=".html"]')) a.href = a.getAttribute('href') + '?app';
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <main>
+      <h1>Impressum</h1>
+      <p class="stand">Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG)</p>
+
+      <div class="card">
+        <p><strong>August Künzel</strong></p>
+        <p>Bautzener Weg 5<br />99085 Erfurt<br />Deutschland</p>
+      </div>
+
+      <h2>Kontakt</h2>
+      <p>
+        E-Mail: <a href="mailto:mail@august-kuenzel.de">mail@august-kuenzel.de</a><br />
+        Telefon: +49 151 20297113
+      </p>
+
+      <h2>Verbraucherstreitbeilegung</h2>
+      <p>Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+      <h2>Angebot</h2>
+      <p>Dieses Impressum gilt für die App Luftinstrumente für iPhone und iPad sowie für diese Webseite.</p>
+
+      <nav class="legal-nav">
+        <a href="datenschutz.html">Datenschutzerklärung</a>
+        <a href="lizenzen.html">Lizenzen</a>
+        <a class="web-only" href="index.html">Hilfe und Kontakt</a>
+      </nav>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+/* Gemeinsame Gestaltung der Rechtstexte (in der App und als Webseite). Keine externen Inhalte. */
+:root {
+  color-scheme: dark light;
+  --bg: #000;
+  --surface: #1c1c1e;
+  --text: #fff;
+  --muted: rgb(235 235 245 / 70%);
+  --line: rgb(84 84 88 / 60%);
+  --link: #0a84ff;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f2f2f7;
+    --surface: #fff;
+    --text: #000;
+    --muted: rgb(60 60 67 / 80%);
+    --line: rgb(60 60 67 / 25%);
+    --link: #0058c4;
+  }
+}
+
+/* In der App immer dunkel, passend zur Oberfläche */
+html.in-app {
+  color-scheme: dark;
+  --bg: #1c1c1e;
+  --surface: #2c2c2e;
+  --text: #fff;
+  --muted: rgb(235 235 245 / 70%);
+  --line: rgb(84 84 88 / 60%);
+  --link: #0a84ff;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+  font-size: 1rem;
+}
+
+main {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: calc(1.5rem + env(safe-area-inset-top, 0px)) 1.25rem calc(3rem + env(safe-area-inset-bottom, 0px));
+}
+
+h1 {
+  font-size: 1.9rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.25rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin: 2rem 0 0.5rem;
+}
+
+h3 {
+  font-size: 1rem;
+  margin: 1.25rem 0 0.25rem;
+}
+
+p,
+li {
+  color: var(--muted);
+}
+
+strong {
+  color: var(--text);
+}
+
+a {
+  color: var(--link);
+}
+
+.stand {
+  margin: 0 0 1.5rem;
+  font-size: 0.9rem;
+}
+
+.card {
+  background: var(--surface);
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+}
+
+.card p {
+  margin: 0.25rem 0;
+}
+
+nav.legal-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin: 2.5rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.95rem;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font: 0.78rem/1.45 ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--muted);
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 1rem;
+  max-height: 24rem;
+  overflow: auto;
+}
+
+/* In der App liegt der Text in einem Fenster, das die Sicherheitsränder schon berücksichtigt. */
+html.in-app main {
+  padding-top: 1.25rem;
+  padding-bottom: 2rem;
+}
+
+/* In der App gibt es den Fertig-Knopf des Dialogs; die Verweisleiste bleibt für die Webseite. */
+html.in-app nav.legal-nav .web-only {
+  display: none;
+}

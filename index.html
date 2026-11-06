@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="Luftinstrumente: Klavier, Gitarre und E-Gitarre in der Luft spielen. Hilfe, Kontakt, Datenschutz und Impressum." />
+    <title>Luftinstrumente · Hilfe und Kontakt</title>
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="legal.css" />
+    <script>
+      // In der App (?app): dunkle Darstellung, Verweise auf die anderen Rechtstexte bleiben in der App.
+      if (new URLSearchParams(location.search).has('app')) {
+        document.documentElement.classList.add('in-app');
+        addEventListener('DOMContentLoaded', () => {
+          for (const a of document.querySelectorAll('a[href$=".html"]')) a.href = a.getAttribute('href') + '?app';
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <main>
+      <h1>Luftinstrumente</h1>
+      <p class="stand">Klavier, Gitarre und E-Gitarre in der Luft spielen, für iPhone und iPad.</p>
+
+      <h2>Hilfe</h2>
+      <h3>Die Kamera startet nicht</h3>
+      <p>Erlaube den Kamerazugriff: Einstellungen, Luftinstrumente, Kamera einschalten. Schließe andere Apps, die gerade die Kamera nutzen, zum Beispiel FaceTime.</p>
+      <h3>Meine Hände werden schlecht erkannt</h3>
+      <p>Sorge für gleichmäßiges Licht von vorne und halte etwa eine Armlänge Abstand zur Kamera. Beide Hände sollten ganz im Bild sein.</p>
+      <h3>Ich höre nichts</h3>
+      <p>Prüfe die Lautstärke deines Geräts und die Lautstärke in den Einstellungen der App. Mit Bluetooth-Kopfhörern kommen Töne spürbar später an; eingebaute Lautsprecher oder Kabelkopfhörer sind am schnellsten.</p>
+      <h3>Werden Bilder von mir gespeichert oder gesendet?</h3>
+      <p>Nein. Das Kamerabild wird nur auf deinem Gerät ausgewertet und sofort wieder verworfen. Mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+
+      <h2>Kontakt</h2>
+      <p>Fragen, Fehler oder Wünsche? Schreib an <a href="mailto:mail@august-kuenzel.de">mail@august-kuenzel.de</a>.</p>
+
+      <nav class="legal-nav">
+        <a href="datenschutz.html">Datenschutzerklärung</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="lizenzen.html">Lizenzen</a>
+      </nav>
+    </main>
+  </body>
+</html>
